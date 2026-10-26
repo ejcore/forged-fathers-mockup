@@ -124,8 +124,9 @@
 
   /* Will */
   .will-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
-  .will-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:36px;position:relative}
-  .will-card .initials{width:84px;height:84px;border-radius:50%;background:linear-gradient(145deg,#2b2d30,#16171a);border:1px solid var(--line2);display:grid;place-items:center;font-family:"Bebas Neue",sans-serif;font-size:36px;color:var(--steel);margin-bottom:20px}
+  .will-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:0;position:relative;overflow:hidden}
+  .will-card .photo{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;border-bottom:1px solid var(--line)}
+  .will-card .will-meta{padding:28px 32px 32px}
   .will-card h3{font-size:36px}
   .will-card .handle{color:var(--bronze2);font-weight:600;font-size:14px;margin:4px 0 22px;display:inline-block}
   .creds{list-style:none;display:grid;gap:12px}
@@ -185,6 +186,10 @@
   .plan .btn{width:100%}
   .fine{text-align:center;margin-top:28px;font-size:13.5px;color:#80858b}
   .fine a{color:var(--bronze2);font-weight:600}
+
+  a.ig{display:inline-flex;align-items:center;gap:8px;color:var(--steel)!important}
+  a.ig svg{flex:0 0 auto;opacity:.9}
+  a.ig:hover{color:var(--bronze2)!important}
 
   /* Footer */
   footer{border-top:1px solid var(--line);padding:56px 0 36px;background:#050505}
@@ -249,7 +254,7 @@
       <a href="#program">Program</a>
       <a href="#will">Will</a>
       <a href="#join">Pricing</a>
-      <a class="btn btn-primary btn-sm" href="https://www.instagram.com/willcarternlf/" target="_blank" rel="noopener">Join</a>
+      <a class="btn btn-primary btn-sm" href="https://www.instagram.com/weareforgedfathers/" target="_blank" rel="noopener">Join</a>
     </div>
   </div>
 </nav>
@@ -262,7 +267,7 @@
       <p class="lead">Forged Fathers is a brotherhood of dads getting stronger, leaner and more present at home. Led by Will Carter: husband, father of three, gym owner and pro natural bodybuilder. Simple plan. Real accountability. Nutrition included.</p>
       <div class="price-pill"><span><b>$39</b>/month or <b>$349</b>/year</span><span class="tag">Nutrition pack included</span></div>
       <div class="ctas">
-        <a class="btn btn-primary" href="https://www.instagram.com/willcarternlf/" target="_blank" rel="noopener">DM Will to join</a>
+        <a class="btn btn-primary" href="https://www.instagram.com/weareforgedfathers/" target="_blank" rel="noopener">DM to join</a>
         <a class="btn btn-ghost" href="#nutrition">See the nutrition pack</a>
       </div>
       <div class="hero-meta">
@@ -316,12 +321,6 @@
         </div>
       </div>
 
-      <div class="hacks">
-        <div class="hack"><div class="n">01</div><h4>Protein smoothie</h4><p>Ultra-filtered milk plus a scoop of whey. Fast, cheap protein when you are stuck short of your number.</p></div>
-        <div class="hack"><div class="n">02</div><h4>Yogurt dessert</h4><p>Greek yogurt with rice cakes. Hits the sweet tooth and the protein target at the same time.</p></div>
-        <div class="hack"><div class="n">03</div><h4>Skipped lunch fix</h4><p>Simple grab-and-go options so a slammed workday does not wreck your day of eating.</p></div>
-        <div class="hack"><div class="n">04</div><h4>Weekend plan</h4><p>How to enjoy family time, cookouts and date night without undoing the week.</p></div>
-      </div>
     </div>
     <p class="nut-note">Targets and full guidance are shared with members after joining. Not medical advice. Check with your doctor before changing your diet.</p>
   </div>
@@ -359,7 +358,7 @@
     </div>
 
     <div class="steps">
-      <div class="step"><div class="k">01</div><h4>DM Will</h4><p>Message <a href="https://www.instagram.com/willcarternlf/" target="_blank" rel="noopener">@willcarternlf</a> on Instagram to claim your spot.</p></div>
+      <div class="step"><div class="k">01</div><h4>DM on Instagram</h4><p>Message <a href="https://www.instagram.com/weareforgedfathers/" target="_blank" rel="noopener">@weareforgedfathers</a> to claim your spot.</p></div>
       <div class="step"><div class="k">02</div><h4>Choose monthly or yearly</h4><p>$39/month or $349/year at checkout. The nutrition pack is included either way.</p></div>
       <div class="step"><div class="k">03</div><h4>Start this week</h4><p>Get your macros, join the WhatsApp group and run this week's plan with the brothers.</p></div>
     </div>
@@ -369,16 +368,18 @@
 <section id="will">
   <div class="wrap will-grid">
     <div class="will-card">
-      <div class="initials">WC</div>
-      <h3>Will Carter</h3>
-      <a class="handle" href="https://www.instagram.com/willcarternlf/" target="_blank" rel="noopener">@willcarternlf</a>
-      <ul class="creds">
-        <li><span>/</span>Husband and father of three</li>
-        <li><span>/</span>Owner, No Limits Fitness, Monroe NC</li>
-        <li><span>/</span>Pro natural OCB bodybuilder</li>
-        <li><span>/</span>Show promoter and judge</li>
-        <li><span>/</span>From England to the US</li>
-      </ul>
+      <img class="photo" src="will-carter.jpg" alt="Will Carter with his wife and three kids" width="800" height="1000" loading="lazy" />
+      <div class="will-meta">
+        <h3>Will Carter</h3>
+        <a class="handle" href="https://www.instagram.com/willcarternlf/" target="_blank" rel="noopener">@willcarternlf</a>
+        <ul class="creds">
+          <li><span>/</span>Husband and father of three</li>
+          <li><span>/</span>Owner, No Limits Fitness, Monroe NC</li>
+          <li><span>/</span>Pro natural OCB bodybuilder</li>
+          <li><span>/</span>Show promoter and judge</li>
+          <li><span>/</span>From England to the US</li>
+        </ul>
+      </div>
     </div>
     <div class="will-copy">
       <div class="eyebrow">Your coach</div>
@@ -480,7 +481,7 @@
           <li>WhatsApp accountability group</li>
           <li>Monthly Zoom Q&amp;A with Will</li>
         </ul>
-        <a class="btn btn-ghost" href="https://www.instagram.com/willcarternlf/" target="_blank" rel="noopener">DM Will to join</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/weareforgedfathers/" target="_blank" rel="noopener">DM to join</a>
       </div>
       <div class="plan best">
         <div class="ribbon">Best value</div>
@@ -493,7 +494,7 @@
           <li>One payment, covered all year</li>
           <li>A full year of showing up for your family</li>
         </ul>
-        <a class="btn btn-primary" href="https://www.instagram.com/willcarternlf/" target="_blank" rel="noopener">DM Will to join</a>
+        <a class="btn btn-primary" href="https://www.instagram.com/weareforgedfathers/" target="_blank" rel="noopener">DM to join</a>
       </div>
     </div>
     <p class="fine">Know a dad who needs this? <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_nV7lbEJ4fhs09ZAhyD1bc0Js6bmoJ1rfu8Fh5YhcCjiDRQ/viewform" target="_blank" rel="noopener">Refer him</a>. When he joins, you get a free month.</p>
@@ -512,7 +513,10 @@
         <a href="#nutrition">Nutrition pack</a>
         <a href="#program">Program</a>
         <a href="#join">Pricing</a>
-        <a href="https://www.instagram.com/willcarternlf/" target="_blank" rel="noopener">@willcarternlf</a>
+        <a class="ig" href="https://www.instagram.com/weareforgedfathers/" target="_blank" rel="noopener" aria-label="Forged Fathers on Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2zm.2 2C6 4 4 6 4 8v8c0 2 2 4 4 4h8c2 0 4-2 4-4V8c0-2-2-4-4-4H8zm9.05 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
+          <span>@weareforgedfathers</span>
+        </a>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_nV7lbEJ4fhs09ZAhyD1bc0Js6bmoJ1rfu8Fh5YhcCjiDRQ/viewform" target="_blank" rel="noopener">Refer a dad</a>
       </div>
     </div>
