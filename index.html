@@ -35,6 +35,25 @@
     img { max-width: 100%; display: block; }
     a { color: inherit; text-decoration: none; }
     .wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+
+    .referral-banner {
+      background: linear-gradient(90deg, rgba(184,115,51,0.18), rgba(184,115,51,0.08) 40%, rgba(184,115,51,0.18));
+      border-bottom: 1px solid rgba(184,115,51,0.45);
+      text-align: center;
+      padding: 0.7rem 1rem;
+      font-size: 0.9rem;
+      color: var(--steel-bright);
+    }
+    .referral-banner strong { color: var(--bronze-bright); }
+    .referral-banner a {
+      color: var(--bronze-bright);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      margin-left: 0.35rem;
+    }
+    .referral-banner a:hover { color: var(--steel-bright); }
+
     .mock-banner {
       background: #1f1810;
       border-bottom: 1px solid rgba(184,115,51,0.35);
@@ -372,6 +391,10 @@
 </head>
 <body>
   <div class="mock-banner">MOCKUP · Brand: weareforgedfathers · Domain &amp; Instagram not registered by this demo</div>
+  <div class="referral-banner" id="referral">
+    <strong>Bring a brother.</strong> Invite a dad you know and <strong>he gets his first month free</strong>.
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_nV7lbEJ4fhs09ZAhyD1bc0Js6bmoJ1rfu8Fh5YhcCjiDRQ/viewform" target="_blank" rel="noopener">Send a referral</a>
+  </div>
 
   <header class="nav">
     <div class="wrap nav-inner">
@@ -600,7 +623,7 @@
           <h2>Don’t wait until you “feel ready.”</h2>
           <p>
             Commitment comes first, the bounce-back habit follows.
-            DM Will to join Forged Fathers. $39/month or $349/year at checkout. Add a family member for +$20/month. Dads only. Show up for your house.
+            DM Will to join Forged Fathers. $39/month or $349/year at checkout. Add a family member for +$20/month. Know a dad who should be in? Invite him and he gets his first month free. Dads only. Show up for your house.
           </p>
           <a class="btn btn-primary" href="https://www.instagram.com/willcarternlf/">DM @willcarternlf</a>
           <a class="btn btn-ghost" href="#program">See What’s Included</a>
