@@ -57,8 +57,9 @@
     }
     .brand { display: flex; align-items: center; gap: 0.75rem; }
     .brand img {
-      width: 44px; height: 44px; object-fit: cover;
-      border-radius: 50%; border: 1px solid var(--line);
+      width: 48px; height: 48px; object-fit: contain;
+      border-radius: 8px; border: 1px solid var(--line);
+      background: #0b0c0e;
     }
     .brand-name {
       font-family: "Bebas Neue", sans-serif;
@@ -160,7 +161,8 @@
     }
     .hero-card img {
       width: 100%; border-radius: 6px; margin-bottom: 1.1rem;
-      aspect-ratio: 1; object-fit: cover;
+      aspect-ratio: 1; object-fit: contain;
+      background: #0b0c0e;
     }
     .hero-card h3 {
       font-family: "Bebas Neue", sans-serif;
@@ -354,7 +356,7 @@
       justify-content: space-between; gap: 1.25rem; align-items: center;
     }
     .footer-brand { display: flex; align-items: center; gap: 0.65rem; }
-    .footer-brand img { width: 36px; height: 36px; object-fit: cover; border-radius: 50%; }
+    .footer-brand img { width: 40px; height: 40px; object-fit: contain; border-radius: 8px; background: #0b0c0e; }
     .mock-note {
       margin-top: 1.35rem; padding-top: 1.15rem;
       border-top: 1px dashed var(--line);
@@ -384,7 +386,7 @@
         <li><a href="#story">Will’s Story</a></li>
         <li><a href="#program">The Program</a></li>
         <li><a href="#proof">Proof</a></li>
-        <li><a href="#upsell">Go Deeper</a></li>
+        <li><a href="#upsell">Add-ons</a></li>
         <li><a href="#join" class="btn btn-primary">Join</a></li>
       </ul>
     </div>
@@ -449,7 +451,7 @@
         <div class="creds">
           <div class="cred">
             <h4>Where</h4>
-            <p>Online-first for dads anywhere · Built by Will Carter (England → US) · Local meetups when they make sense</p>
+            <p>Online-first for dads anywhere · Built by Will Carter (England → US)</p>
           </div>
           <div class="cred">
             <h4>Stage</h4>
