@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pricing | Forged Fathers Group and Elite</title>
+<meta name="description" content="Forged Fathers Group is $39/month. Forged Fathers Elite is $349/month with 1:1 coaching from Will Carter. Weekly check-ins happen in Kahunas." />
+<link rel="icon" href="logo-web.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#070707; --bg2:#0e0f10; --panel:#141516; --panel2:#1a1c1e;
+    --line:#26282b; --line2:#33363a;
+    --steel:#c9ccd0; --steel2:#9aa0a6; --text:#e9eaec; --muted:#9a9fa5;
+    --bronze:#b9814f; --bronze2:#d39a66; --bronze-dk:#8a5d36;
+    --radius:14px; --max:1160px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  h1,h2,h3,.display{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spacing:.02em;line-height:.95;color:#f3f4f5}
+  h2{font-size:clamp(40px,5.4vw,64px)}
+  p{color:var(--muted)}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--bronze2);margin-bottom:16px}
+  .eyebrow::before{content:"";width:28px;height:1px;background:var(--bronze)}
+  .lead{font-size:18px;color:#b9bdc2;max-width:640px}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:10px;font-weight:700;font-size:15px;letter-spacing:.02em;transition:transform .15s,background .15s,border-color .15s;white-space:nowrap}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-primary{background:linear-gradient(180deg,var(--bronze2),var(--bronze));color:#140c05;box-shadow:0 8px 24px rgba(185,129,79,.22)}
+  .btn-primary:hover{background:linear-gradient(180deg,#e0a874,var(--bronze2))}
+  .btn-ghost{border:1px solid var(--line2);color:var(--text);background:rgba(255,255,255,.02)}
+  .btn-ghost:hover{border-color:var(--steel2)}
+  .btn-sm{padding:10px 18px;font-size:14px}
+
+  .refer{background:linear-gradient(90deg,#2a1b0f,#3a2614 50%,#2a1b0f);border-bottom:1px solid var(--bronze-dk)}
+  .refer .wrap{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px;text-align:center}
+  .refer p{color:#f1dcc6;font-size:15px}
+  .refer strong{color:#fff;font-weight:800}
+  .refer a{background:#f1dcc6;color:#2a1b0f;font-weight:800;font-size:13px;padding:8px 14px;border-radius:8px;letter-spacing:.03em}
+  .refer a:hover{background:#fff}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(7,7,7,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand img{width:64px;height:64px;object-fit:contain;background:#050505;border:1px solid var(--line2);border-radius:10px}
+  .brand .nm{font-family:"Bebas Neue",sans-serif;font-size:26px;letter-spacing:.06em;line-height:1;color:#eef0f2}
+  .brand .nm small{display:block;font-family:Inter,sans-serif;font-size:10.5px;letter-spacing:.2em;color:var(--bronze2);font-weight:600;margin-top:4px;text-transform:uppercase}
+  .links{display:flex;align-items:center;gap:30px}
+  .links a{font-size:14px;color:#b4b8bd;font-weight:500}
+  .links a:hover{color:#fff}
+  .links a.btn-primary,.links a.btn-primary:hover{color:#140c05}
+
+  .cta{background:radial-gradient(900px 400px at 50% 0%,rgba(185,129,79,.12),transparent 65%),var(--bg);padding:88px 0 104px}
+  .cta .sec-head{max-width:720px;margin:0 auto 48px;text-align:center}
+  .cta .sec-head .eyebrow{justify-content:center}
+  .cta .sec-head .lead{margin:18px auto 0}
+  .plans{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:860px;margin:0 auto}
+  .plan{background:var(--panel);border:1px solid var(--line2);border-radius:18px;padding:36px;position:relative;display:flex;flex-direction:column}
+  .plan ul{flex:1}
+  .plan.best{border-color:var(--bronze-dk);background:linear-gradient(180deg,#1c1510,var(--panel))}
+  .plan .ribbon{position:absolute;top:-12px;right:24px;background:var(--bronze);color:#140c05;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:6px}
+  .plan .pname{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--steel2)}
+  .plan .amt{font-family:"Bebas Neue",sans-serif;font-size:76px;color:#fff;line-height:1;margin:12px 0 4px}
+  .plan .amt small{font-family:Inter,sans-serif;font-size:16px;color:var(--muted);font-weight:500}
+  .plan .sub{font-size:14px;color:var(--muted);margin-bottom:24px}
+  .plan ul{list-style:none;display:grid;gap:10px;margin-bottom:28px}
+  .plan li{font-size:14.5px;color:#c9ccd0;padding-left:24px;position:relative}
+  .plan li::before{content:"✓";position:absolute;left:0;color:var(--bronze2);font-weight:800}
+  .plan .btn{width:100%}
+  .plan .soon{margin-top:12px;font-size:13px;color:#80858b;text-align:center}
+  .fine{text-align:center;margin-top:28px;font-size:13.5px;color:#80858b}
+  .fine a{color:var(--bronze2);font-weight:600}
+
+  a.ig{display:inline-flex;align-items:center;gap:8px;color:var(--steel)!important}
+  a.ig svg{flex:0 0 auto;opacity:.9}
+  a.ig:hover{color:var(--bronze2)!important}
+
+  footer{border-top:1px solid var(--line);padding:56px 0 36px;background:#050505}
+  .foot{display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center}
+  .foot img{width:120px;height:120px;object-fit:contain;background:#050505;border:1px solid var(--line);border-radius:14px}
+  .foot .t{font-family:"Bebas Neue",sans-serif;font-size:30px;letter-spacing:.06em;color:#eceef0}
+  .foot p{font-size:14px}
+  .foot nav{position:static;background:none;border:none;backdrop-filter:none}
+  .foot .fl{display:grid;gap:8px;text-align:right}
+  .foot .fl a{font-size:14px;color:#a8adb2}
+  .foot .fl a:hover{color:#fff}
+  .legal{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:12.5px;color:#6c7177;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  @media (max-width:860px){
+    .links a:not(.btn){display:none}
+    .cta{padding:56px 0 76px}
+    .plans{grid-template-columns:1fr}
+    .foot{grid-template-columns:1fr;text-align:center;justify-items:center}
+    .foot .fl{text-align:center}
+  }
+  @media (max-width:520px){
+    .wrap{padding:0 18px}
+    .brand img{width:56px;height:56px}
+    .brand .nm small{display:none}
+    .plan{padding:28px}
+    .plan .btn{min-height:52px;font-size:16px}
+  }
+</style>
+</head>
+<body>
+
+<div class="refer">
+  <div class="wrap">
+    <p><strong>Bring a brother.</strong> Refer a dad. When he joins, <strong>you get a free month.</strong></p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_nV7lbEJ4fhs09ZAhyD1bc0Js6bmoJ1rfu8Fh5YhcCjiDRQ/viewform" target="_blank" rel="noopener">Refer a dad</a>
+  </div>
+</div>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Forged Fathers home">
+      <img src="logo-web.jpg" alt="Forged Fathers logo" width="64" height="64" />
+      <span class="nm">Forged Fathers<small>Led by Will Carter</small></span>
+    </a>
+    <div class="links">
+      <a href="index.html#program">Program</a>
+      <a href="index.html#nutrition">Nutrition</a>
+      <a href="index.html#will">Will</a>
+      <a href="pricing.html">Pricing</a>
+      <a class="btn btn-primary btn-sm" href="#plans">Join</a>
+    </div>
+  </div>
+</nav>
+
+<section class="cta" id="plans">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Pricing</div>
+      <h2>Group or Elite.</h2>
+      <p class="lead">Same standard. You choose how close the coaching is. Check-ins happen in Kahunas. The brotherhood stays in WhatsApp.</p>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <div class="pname">Forged Fathers Group</div>
+        <div class="amt">$39<small> / month</small></div>
+        <div class="sub">Or $349 for the year. Same group program.</div>
+        <ul>
+          <li>TrainHeroic workouts</li>
+          <li>Weekly Kahunas check-in</li>
+          <li>WhatsApp community</li>
+          <li>Starter pack</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://kahunas.io/coach/payment/link/41637d3e-da54-424f-ad71-e38fdb742de2/fbe6e325-8030-489f-a752-470d8ac4b415" target="_blank" rel="noopener">Pay to join</a>
+      </div>
+      <div class="plan best" id="elite-join">
+        <div class="ribbon">1:1 with Will</div>
+        <div class="pname">Forged Fathers Elite</div>
+        <div class="amt">$349<small> / month</small></div>
+        <div class="sub">Custom coaching. Will replies to you.</div>
+        <ul>
+          <li>Everything in Group</li>
+          <li>Custom TrainHeroic program</li>
+          <li>Macros set for you</li>
+          <li>Weekly Kahunas check-in with a personal reply from Will</li>
+          <li>1:1 onboarding</li>
+        </ul>
+        <a class="btn btn-primary" href="#elite-join">Join Elite</a>
+        <p class="soon">Payment link coming soon.</p>
+      </div>
+    </div>
+    <p class="fine">Group checkout is open. Elite checkout is not live yet. <a href="index.html">Back to the homepage</a>.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <img src="logo-web.jpg" alt="Forged Fathers logo" width="120" height="120" />
+      <div>
+        <div class="t">Forged Fathers</div>
+        <p>Strength, nutrition and brotherhood for dads. Led by Will Carter.</p>
+      </div>
+      <div class="fl">
+        <a href="index.html#program">Program</a>
+        <a href="index.html#nutrition">Nutrition</a>
+        <a href="#plans">Pricing</a>
+        <a class="ig" href="https://www.instagram.com/weareforgedfathers/" target="_blank" rel="noopener" aria-label="Forged Fathers on Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2zm.2 2C6 4 4 6 4 8v8c0 2 2 4 4 4h8c2 0 4-2 4-4V8c0-2-2-4-4-4H8zm9.05 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
+          <span>@weareforgedfathers</span>
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_nV7lbEJ4fhs09ZAhyD1bc0Js6bmoJ1rfu8Fh5YhcCjiDRQ/viewform" target="_blank" rel="noopener">Refer a dad</a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>&copy; 2026 Forged Fathers. weareforgedfathers.</span>
+      <span>Not medical advice. Results vary with effort and consistency.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
